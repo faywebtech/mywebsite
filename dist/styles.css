@@ -992,6 +992,38 @@ textarea:focus {
   color: #fff;
 }
 
+.facebook {
+  background: #4267B2;
+  color: #fff;
+}
+
+.facebook {
+  background: #4267B2;
+  color: #fff;
+}
+
+.facebook:hover {
+  background: #4267B2;
+  color: #000;
+}
+
+.whatsapp {
+  background: #4AC959;
+  color: #fff;
+}
+
+.facwha {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.whatsapp:hover {
+  background: #455A64;
+  color: #fff;
+}
+
 /* Media queries */
 
 /* Desktops and xl screens */
@@ -1224,5 +1256,11 @@ textarea:focus {
     grid-template-columns: 1fr;
     grid-gap: 4rem;
   }
+
+  .facwha {
+    display: flex;
+    flex-direction: column;
+  }
+
 
 }

@@ -824,20 +824,23 @@ footer {
   color: #333;
 }
 
-.logo-pricing .logo-grid {
+.logo-pricing .logo-grid,
+.web-pricing .web-grid {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 5rem;
   margin: 5rem auto;
 }
 
-.logo-grid .item {
+.item {
   position: relative;
   text-align: center;
-  padding: 0 2rem;
-  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
   border: 0px solid;
   border-radius: 15px;
   box-shadow: 2px 5px 10px #888888;
@@ -861,6 +864,7 @@ footer {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  padding: 0 2rem;
 }
 
 .logo-grid .list p::before,
@@ -870,50 +874,24 @@ footer {
   font-weight: bolder;
 }
 
-.logo-grid .price {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #007eafd7;
-  color: #fff;
+.price {
   font-size: 2rem;
   width: 100%;
   padding: 1.2rem 0;
+  margin-top: 1rem;
+  font-weight: bold;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+}
+
+.logo-grid .price {
+  background-color: #007eafd7;
+  color: #fff;
 }
 
 .web-grid .price {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   background-color: #fff;
   color: #007eafd7;
-  font-size: 2rem;
-  font-weight: bold;
-  width: 100%;
-  padding: 1.2rem 0;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-}
-
-.web-grid .item {
-  position: relative;
-  text-align: center;
-  padding: 0 2rem;
-  height: 85vh;
-  border: 0px solid;
-  border-radius: 15px;
-  box-shadow: 2px 5px 10px #888888;
-}
-
-.web-pricing .web-grid {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5rem;
-  margin: 5rem auto;
 }
 
 .web-grid .item {
@@ -1081,18 +1059,6 @@ textarea:focus {
   .customers .client-logo-grid {
     margin-top: 15rem;
   }
-
-  .logo-pricing .logo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .logo-grid .item {
-    height: 30vh;
-  }
-
-  .web-grid .item {
-    height: 40vh;
-  }
 }
 
 /* Ipad and tablets */
@@ -1120,14 +1086,6 @@ textarea:focus {
     margin-top: 15rem;
   }
 
-  .logo-grid .item {
-    height: 42vh;
-  }
-
-  .web-grid .item {
-    height: 50vh;
-  }
-
   .portfolio-grid {
     height: 60vh;
   }
@@ -1139,7 +1097,7 @@ textarea:focus {
 }
 
 /* Mobile phones */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 500px) {
   .hero {
     height: auto;
     width: 100%;
@@ -1260,14 +1218,6 @@ textarea:focus {
 
   .website-grid img {
     opacity: 1;
-  }
-
-  .logo-grid .item {
-    height: 65vh;
-  }
-
-  .web-grid .item {
-    height: 78vh;
   }
 
   .contact .contact-grid {
